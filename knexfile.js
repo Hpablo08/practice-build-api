@@ -18,22 +18,15 @@ module.exports = {
     connection: {
       connectionString: process.env.DATABASE_URL,
       ssl: {
-        rejectUnauthorized: false
-      }      
+        rejectUnauthorized: false,
+      },
     },
-  pool: {
-    min: 2,
-    max: 10,
-  },
-  migrations: {
-    tableName: "knex_migrations",
+    pool: {
+      min: 2,
+      max: 10,
+    },
+    migrations: {
+      tableName: "knex_migrations",
+    },
   },
 };
-
-  // production: {
-  //   client: "postgresql",
-  //   connection: {
-  //     database: "poursNpups",
-  //     user: "postgres",
-  //     password: "hjp2008",
-  //   },
